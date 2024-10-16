@@ -1,0 +1,6 @@
+Nodes and Topics
+•	Nodes: Individual processes that perform computation. In your case, you have nodes like path_planner and turtle1.
+•	Topics: Channels over which nodes communicate. They publish messages to topics or subscribe to receive messages. Your path_planner node publishes velocity commands to the turtle1/cmd_vel topic.
+Path Planner Node
+•	Publisher: The path_planner node creates a publisher for the turtle1/cmd_vel topic. It sends commands that dictate how the turtle should move.
+•	Timer Callback: This function gets called periodically. It checks the trajectory parameter and calls the appropriate function (circle_trajectory, square_trajectory, infinity_trajectory, star_trajectory) to generate movement commands.
